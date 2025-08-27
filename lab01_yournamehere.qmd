@@ -1,9 +1,293 @@
 ---
-title: "lab01"
-format: html
-editor: source
+title: "Lab 1"
+subtitle: "Math 141"
+author: "Insert Your Name Here"
+format: pdf
 ---
 
-## Lab 01
+## Due: Thursday, September 11th at 9am on Gradescope
 
-test git
+In this lab, you will practice
+
+1.  Collecting data.
+2.  Mapping data to a visualization (that isn't constrained by what you know how to create on a computer).
+3.  Telling a compelling story visually.
+4.  Running `R` code from chunks, modifying the text, and rendering a `Quarto` document.
+5.  Viewing and summarizing data frames in `R`.
+
+
+### Add any collaborators here!
+
+I collaborated with...
+
+**Remember that you are not allowed to use any generative AI models (like ChatGPT) on your lab.**
+
+### When you have completed Lab 1, follow this submission process:
+
+-   **Step 1**: Export the PDF (not the QMD) of your Lab 1 from the RStudio Server. Within the Files tab in the lower right-hand window:
+    -   Check the box next to "lab01_yourname.pdf".
+    -   Click on the blue cog and select "Export..." and then "Download."
+-   **Step 2**: Within Gradescope (which you can access from the course website), click on Lab 01 and select the option "Submit PDF."
+    -   Then "Select PDF" from where it was downloaded onto your computer and hit "Upload PDF."
+-   **Step 3**: Within the Question Outline, click on "Problem 1" and then click on the pages that contain your solutions for Problem 1. Repeat this process for each Problem. Then hit "Submit."
+
+# Problems
+
+## Problem 1
+
+### Step 1
+
+-   Collect data on some aspect of your life.
+    -   In deciding what to investigate, think about aspects of your world you might want to better understand using a quantitative lens.
+    -   Brainstorm several variables that you can collect data on; i.e., more than you might end up using in the visualization. You don't yet know what interesting data story might be revealed in the data! I also recommend collecting both quantitative and categorical variables, if feasible.
+    -   Pick a time span (e.g., day, week, evening) that aligns well with the data you are collecting.
+    -   Plan ahead so that you can collect a good number of observations on your chosen variables. 
+
+### Step 2
+
+-   Find a story in your data and determine your audience (i.e., the person who will be receiving the postcard).
+    -   The story could be an interesting trend or pattern. Or, maybe the story is that there is surprisingly no pattern to the aspect of your life that you captured.
+    -   You can pick anyone for the recipient. If you'd like, I will stamp and mail your postcard for you. 
+-   Figure out how you want to visualize the story.
+    -   We strongly encourage creating practice sketches.
+    -   Be creative. Don't constrain yourself to data visualizations you may already know (e.g., scatterplots, bar graphs, pie charts).
+    -   Regardless of the background of the intended recipient, plan a visualization that requires no background statistical knowledge.
+    -   Feel free to check out the ["Dear Data" website](http://www.dear-data.com/theproject) for inspiration but **your postcard must be unique**.
+-   Keep in mind that the postcards will be assessed in terms of
+    -   The appropriateness and accuracy of the representation
+    -   How engaging and creative the visualization is
+    -   How clear, readable, and complete the visualization and legends are
+
+### Step 3
+
+-   Create practice sketches. Only use the postcard once you are ready to produce the final visualization.
+
+-   On the postcard:
+    -   Be sure to create any necessary legends and succinct captions or helper text. (These may go on the front or the back, depending on how you want to use the space.)
+    -   On the back of the postcard, feel free to briefly explain the assignment to the recipient and include their address.
+
+
+### Step 4
+
+If you have any problems with this step, make sure to ask for help during office hours or on Slack!
+
+-   Take a picture of BOTH the front and the back of the postcard.
+
+    -   Feel free to cover the recipient address when taking the pictures or to wait to fill it in until after you have taken the pictures.
+    -   Export the pictures to PNGs.\
+        Note: Changing the file name from "front.HEIC" to "front.png" is NOT the same as actually converting the file type to PNG!
+    -   Label the front picture as "front.png" and the back as "back.png".
+
+-   Upload the pictures to the RStudio Server. Make sure to store them in a sub-folder called "images".
+
+- Check that when you render the document, your postcard is now included instead of a postcard from the Dear Data book.
+
+![](images/front.png)
+
+![](images/back.png)
+
+
+### Step 5
+
+-   Write a reflection that addresses the following questions:
+    -  What was the inspiration behind your visualization? In other words, how did you decide what question to investigate or what data to collect?
+    -  Describe a story that your visualization communicates. Be sure to reference specific details of your visualization/data that support the story.
+    -  Did the story you were planning to tell change during the data collection process? What surprised you most about your findings?
+
+
+
+(Put reflection here.)
+
+
+
+## Problem 2
+
+In this problem, we are going to explore a data frame in `R`.
+
+a.  For data frames, what does a row represent? What does a column represent?
+
+
+
+
+
+
+
+b.  Run the following code to load the `openintro` library/package and to grab the `yrbss` dataset.
+
+*Pro tip: To run a single line of code, put the cursor on the same line as the code and hit Command+Enter (for a Mac) or Control+Enter (for a PC). To run all the code in a chunk, put the cursor on a line of code and hit Command+Shift+Enter (for a Mac) or Ctrl+Shift+Enter (for a PC).*
+
+```{r}
+#| message: false
+#load the openintro package and the yrbss dataset
+library(openintro)
+data(yrbss)
+```
+
+c.  Run the following to begin exploring the data. (Leave in the `eval: false`.)
+
+*Pro tip: For datasets in packages, we can run `?` followed by the dataset name to open up the documentation file in the Help pane that describes the dataset and provides information on the variables.*
+
+```{r}
+#| eval: false  
+View(yrbss)
+?yrbss
+```
+
+d.  What does a row of the data frame represent? How many rows are in the data frame?
+
+
+
+
+
+
+
+e.  What does a column of the data frame represent? How many columns are in the data frame?
+
+
+
+
+
+
+
+f.  Is `age` recorded as a categorical or a quantitative variable? How about `hours_tv_per_school_day`? Explain your reasoning.
+
+
+
+
+
+
+
+g.  We will learn to be careful with how we treat missing values, which are typically labeled as `NA` in the date frame. What are two possible reasons why the the variable `text_while_driving_30d` might be recorded as `NA`? 
+
+
+
+
+
+
+
+h.  List two quantitative variables found in the dataset that haven't already been mentioned in this problem.
+
+
+
+
+
+
+
+
+i.  List two categorical variables found in the dataset that haven't already been mentioned in this problem.
+
+
+
+
+
+
+
+
+
+
+## Problem 3
+
+Let's explore the `somerville` data frame, which is in the `somerville.csv` file. 
+
+Starting in 2011, officials from the city of Somerville, Massachusetts decided to start measuring residents' overall happiness and satisfaction with many aspects of life in Somerville; their goal was to become the first city in the United States to systematically track people's happiness. The Happiness Survey is an initiative of the Mayor's Office of Analytics and Innovation (SomerStat) and has the goal of supporting the local government's understanding of what makes Somerville a great place to live. 
+
+The happiness survey is sent out every two years to a random sample of Somerville households, with the instruction that each survey should be filled out by one person. The survey asks residents to rate their personal happiness, wellbeing, and satisfaction with City services. This combined dataset includes the survey responses from 2011 to 2019. 
+
+Run the code in the following chunk to load the `somerville` data.
+
+```{r, message = FALSE}
+library(tidyverse)
+somerville <- read_csv("data/somerville.csv")
+```
+
+
+Variables in the `somerville` data:
+
+  * `year`: year that response was collected
+  * `happy`: happiness rating, on a scale from 1 to 10 with 10 being most happy
+  * `satisfied_life`: rating for satisfaction with life in general, on a scale from 1 to 10 with 10 being most satisfied
+  * `satisfied_somerville`: rating for satisfaction with Somerville as a place to live, on a scale from 1 to 10 with 10 being most satisfied
+  * `age`: age in years
+  * `children_home`: whether respondent has children under 18 living at home
+  * `ward`: neighborhood ward the respondent lives in
+  * `precinct`: neighborhood precinct the respondent lives in
+  * `student`: whether respondent is a student
+  * `convenient_transport`: rating for how convenient it is to get to where you want to go, on a scale from 1 to 10 with 10 being most satisfied
+  * `direction_somerville`: whether respondent feels the City is headed in the right direction or is on the wrong track
+  * `housing`: whether respondent rents or owns their home
+  * `primary_transport`: primary form of transportation
+  * `lived_here`: years respondent has lived in Somerville
+
+You can use the `summary()` function on numerical variables to see summary statistics like the minimum and maximum values and the `table()` function to see the number of observations per category for categorical variables. See below for two examples of the syntax:
+
+```{r}
+summary(somerville$lived_here)
+table(somerville$primary_transport)
+```
+
+*Pro tip: Clicking on the name of the data frame in the Environment pane opens a spreadsheet window. In that window, you can sort the data frame by a particular variable by clicking on the arrows in that variable's column.*
+
+a. How many observations and variables are in the data? What does a row represent in the context of the data?
+
+
+
+
+
+
+
+b. Identify which variables are quantitative and which variables are categorical.
+
+
+
+
+
+
+
+c. Suppose that for the next version of the happiness survey, city officials would like to obtain data on race. The U.S. Office of Management and Budget requires the Census Bureau to have five minimum categories to the question asking respondents for racial identity: White, Black or African American, American Indian or Alaska Native, Asian, and Native Hawaiian or Other Pacific Islander. Discuss the extent to which these categories adequately represent the variable they describe. 
+
+
+
+
+
+
+
+d. For each categorical variable in the `somerville` data, discuss the extent to which the given categories adequately represent the variable they describe. 
+
+```{r}
+
+```
+
+
+
+
+
+
+
+e. What is a categorical variable you would like to collect data on and what would the response categories be?
+
+
+
+
+
+
+
+f. For each quantitative variable in the `somerville` data, discuss if the range of values given are reasonable. In other words, think about whether there are values that might be the result of data entry error (such as if someone was listed as being 50 feet tall) and comment on what an unreasonable value might look like.
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+g. What is a quantitative variable that you would recommend be collected in the next version of the survey? Briefly explain why having information about this variable would be helpful for the local government to understand what makes Somerville a great place to live. 
+
+
+
+
+
+
